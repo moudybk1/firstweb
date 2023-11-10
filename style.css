@@ -1,0 +1,135 @@
+:root {
+  --gradient1: linear-gradient(111.4deg, rgba(7, 7, 9, 1) 25%, rgba(27, 24, 113, 1) 98%);
+  --gradient2: radial-gradient(circle 344px at 1.4% 0%, rgba(242, 185, 252, 1) 19.3%, rgba(250, 254, 190, 1) 80.7%);
+}
+
+@keyframes bg-ani {
+  0% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
+  }
+}
+
+nav .navbar-brand {
+  background-image: var(--gradient2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 300%;
+  animation: bg-ani 10s infinite alternate;
+}
+
+nav .nav-link:hover {
+  color: red;
+}
+
+nav .nav-link {
+  margin-left: 10px;
+}
+
+nav {
+  background-color: black;
+  border-bottom: 2px solid white;
+}
+
+body {
+  background-color: black;
+}
+
+.jumbotron {
+  /* padding-top: 7rem; */
+  height: 100vh;
+  /* margin-bottom: 14rem; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+section {
+  padding-top: 2rem;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+#about .container {
+  height: 100vh;
+}
+
+#home .container .jumbotron button {
+  padding: 0.8rem 2.5rem;
+  margin-block-start: 1rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1rem;
+  /* font-family: "Montserrat"; */
+  color: black;
+  text-decoration: none;
+
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: red;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+#home .container .jumbotron button:hover {
+  border: 3px solid red;
+  color: red;
+  background-color: transparent;
+}
+
+.home .container .jumbotron button a {
+  text-decoration: none;
+  color: black;
+}
+
+.home .container .jumbotron button a:hover {
+  text-decoration: none;
+  color: red;
+}
+
+.story .work a {
+  color: rgb(148, 148, 148);
+  text-decoration: none;
+}
+
+.story .work a:hover {
+  color: white;
+}
+
+#about .socmed ul li a {
+  text-decoration: none;
+  font-size: 3rem;
+  color: white;
+  transition: all 0.1s ease-in-out;
+  margin: 1rem;
+}
+
+#about .socmed ul li a:hover {
+  color: rgb(155, 0, 0);
+}
+
+#about .container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 375px) {
+  #home .container .jumbotron img {
+    width: 200px;
+  }
+
+  #about .socmed ul li a {
+    font-size: 2rem;
+  }
+}
